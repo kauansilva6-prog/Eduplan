@@ -1,3 +1,39 @@
+/*Variáveis de CSS*/
+/*Aqui a gente guerda as cores do site em um só lugar.
+Vantagem: se quiser trocar uma cor, muda só aqui e
+ela é atualizada em todos os lugarer que a usam.  */
+:root {
+    --azul-escuro: #1d4ed8 ;
+    --azul: #2563eb;
+    --verde: #16a34a;
+    --verde-escuro:#01521f;
+    --texto-principal:#000000;
+    --cor-borda: #475569;
+    --cor-fundo: #ffffff;
+    --cor-borda: #ffffff;
+}
 body{
-    background-color: rgb(183, 206, 101);
+     font-family: "Kablammo", system-ui;
+     color:var(--texto-principal);
+    
  }
+ .header{
+    position: sticky; /*faz o cabeçalho "grudar no topo da tela" */
+    top:0;
+    z-index: 100;
+    background-color:  var(--cor-fundo);
+    border-bottom: 1px solid var(--cor-borda);
+    
+
+ }
+
+ .header-innner{
+    max-width: 1200px;
+    margin: o auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
