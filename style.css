@@ -1,39 +1,100 @@
-/*Variáveis de CSS*/
-/*Aqui a gente guerda as cores do site em um só lugar.
-Vantagem: se quiser trocar uma cor, muda só aqui e
-ela é atualizada em todos os lugarer que a usam.  */
+/* Variáveis de CSS */
+/* Aqui a gente guarda as cores do site em um só lugar.
+Vantagem: se quiser mudar de cor, é só alterar aqui e ele muda em todo o site. */
 :root {
-    --azul-escuro: #1d4ed8 ;
-    --azul: #2563eb;
-    --verde: #16a34a;
-    --verde-escuro:#01521f;
-    --texto-principal:#000000;
-    --cor-borda: #475569;
-    --cor-fundo: #ffffff;
-    --cor-borda: #ffffff;
+    --azul-escuro: #1D4ED8;
+    --azul: #2563EB;
+    --verde: #10B981;
+    --verde-escuro: #047857;
+    --texto-principal: #0F172A;
+    --texto-secundário: #475569;
+    --cor-borda: #64f89d;
+    --cor-fundo: #a6fc7e86;
 }
-body{
-     font-family: "Kablammo", system-ui;
-     color:var(--texto-principal);
-    
- }
- .header{
-    position: sticky; /*faz o cabeçalho "grudar no topo da tela" */
-    top:0;
-    z-index: 100;
-    background-color:  var(--cor-fundo);
-    border-bottom: 1px solid var(--cor-borda);
-    
 
- }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
- .header-innner{
-    max-width: 1200px;
-    margin: o auto;
-    padding: 0 24px;
+body {
+    font-family: "Kablammo", system-ui; /* fonte do projeto */
+    color: var(--texto-principal);
+}
+
+.header {
+    position: sticky; /* Faz o cabeçalho "grudar" no topo da página ao rolar */
+    top: 0; /* Cola no topo */
+    z-index: 100; /* Define a ordem de empilhamento */
+    background-color: var(--cor-fundo); 
+    border-bottom: 1px solid var(--cor-borda);    
+}
+ .header-inner {
+    max-width: 1200px; /* Define a largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 0 24px; /* Adiciona um espaçamento interno */
+    display: flex; /* Ativa o Flexbox */
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: space-between; /* Distribui os itens horizontalmente */
+    gap: 24px; /* Adiciona um espaço entre os itens */
+ }
+/* Logo */
+ .logo{
+    display: flex;
+    align-items: center; /* Alinha o logotipo no centro verticalmente */
+    gap: 8px; /* Adiciona um espaço entre o ícone e o texto do logotipo */
+    font-size: 20px;
+    font-weight: 800; /* Deixa o texto do logotipo em negrito */
+    color: var(--texto-principal);
+    text-decoration: none; /* Remove o sublinhado do texto do logotipo */
+}
+
+.logo img {
+    width:80px; /* Define a largura da imagem do logotipo */
+}
+
+/* Menu de navegação */
+.nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 24px;
+    gap: 32px;
+    list-style: none; /* Remove os marcadores da lista */
+
+    /* Zera os espaçamentos padrão do navegador */
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--texto-secundário);
+    font-size: 15px;
+    font-weight: 500;
+    padding: 6px 0; /* Um respiro em cima e embaixo */
+    transition: color .2s ease; /* Transição suave para a cor do texto */
+    white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+}
+
+/* :hover é aplicado quando o mouse está sobre o elemento */
+.nav a:hover {
+    color: var(--texto-principal); /* Muda a cor do texto ao passar o mouse */
+}
+
+/* Botões de ação (Entrar e Sair) */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.btn-entrar {
+    background: var(--cor-fundo);
+    color: var(--texto-principal);
+    border-color: var(--cor-borda);
+}
+.btn-entrar {
+    background: var(--cor-fundo);
+    color: var(--texto-principal);
+    border-color: var(--cor-borda);
 }
 
